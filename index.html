@@ -1,0 +1,198 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevMinds - Web Design & Development</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header_content">
+            <div class="header-left">
+                <a href="#" class="header_logo">
+                    <img src="Grafiche/Green White Minimalist Brain Bulb Smart Logo (2).svg" alt="Logo DevMinds">
+                    <span class="color1">Dev</span><span class="color2">Minds</span>
+                </a>
+            </div>
+            <div class="header-right">
+                <ul class="header_menu">
+                    <li id="About"><a href="#about">About</a></li>
+                    <li id="Servizi"><a href="#servizi">Servizi</a></li>
+                    <li id="Portfolio"><a href="#portfolio">Portfolio</a></li>
+                    <li id="Contatti"><a href="#contatti">Contatti</a></li>
+                    <li id="Faq"><a href="#contatti">FAQ</a></li>
+                </ul>
+                <div class="header_quick">
+                    <div class="icona">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelector('.icona')?.addEventListener("click", function(){
+                document.body.classList.toggle('menu_open')
+            });
+            document.querySelector('#About')?.addEventListener("click", function(){
+                document.body.classList.toggle('menu_open')
+            });
+            document.querySelector('#Servizi')?.addEventListener("click", function(){
+                document.body.classList.toggle('menu_open')
+            });
+            document.querySelector('#Portfolio')?.addEventListener("click", function(){
+                document.body.classList.toggle('menu_open')
+            });
+            document.querySelector('#Contatti')?.addEventListener("click", function(){
+                document.body.classList.toggle('menu_open')
+            });
+            document.querySelector('#Faq')?.addEventListener("click", function(){
+                document.body.classList.toggle('menu_open')
+            });
+        </script>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Trasformiamo le tue idee in realtà digitale</h1>
+            <p>Creiamo siti web professionali che fanno crescere il tuo business</p>
+            <a href="#contatti" class="cta-button">Iniziamo il tuo progetto</a>
+            <div class="hero-social-icons">
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SEZIONE ABOUT START-->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Chi Siamo</h2>
+                    <p class="subtitle">La tua agenzia di web design professionale</p>
+                    <p>DevMinds è un team di sviluppatori e designer appassionati che creano soluzioni web innovative e personalizzate. Combiniamo creatività e tecnologia per trasformare le tue idee in realtà digitali che fanno crescere il tuo business.</p>
+                    <p>Offriamo servizi completi di design e sviluppo, dalla progettazione alla realizzazione di siti web responsive, ottimizzati per i motori di ricerca e con un'esperienza utente eccezionale.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-code"></i>
+                            <h3>Sviluppo Professionale</h3>
+                            <p>Codice pulito e ottimizzato per prestazioni eccellenti e facilità di manutenzione</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>Design Creativo</h3>
+                            <p>Interfacce moderne e accattivanti che catturano l'attenzione degli utenti</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-rocket"></i>
+                            <h3>Soluzioni Veloci</h3>
+                            <p>Tempi di caricamento ottimizzati per un'esperienza utente superiore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="Grafiche/DevMinds.svg" alt="Il team di DevMinds">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--SEZIONE ABOUT END-->
+
+    <section id="servizi" class="services">
+        <h2>I Nostri Servizi</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Design</h3>
+                <p>Design moderno e responsive per ogni dispositivo</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile First</h3>
+                <p>Ottimizzazione per dispositivi mobili</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-search"></i>
+                <h3>SEO</h3>
+                <p>Ottimizzazione per i motori di ricerca</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Il Nostro Portfolio</h2>
+        <div class="portfolio-grid">
+            <!-- Aggiungi qui le immagini dei tuoi progetti -->
+            <div class="portfolio-item">Progetto 1</div>
+            <div class="portfolio-item">Progetto 2</div>
+            <div class="portfolio-item">Progetto 3</div>
+            <div class="portfolio-item">Progetto 4</div>
+        </div>
+    </section>
+
+    <section id="contatti" class="contact">
+        <h2>Contattaci</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Nome" required>
+                <input type="text" placeholder="Cognome" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Oggetto" required>
+                <textarea placeholder="Il tuo messaggio" required></textarea>
+                <button type="submit" class="submit-btn">Invia Messaggio</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Iscriviti alla nostra Newsletter</h2>
+            <p>Ricevi aggiornamenti e consigli sul mondo del web design</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="La tua email" required>
+                <button type="submit">Iscriviti</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>DevMinds</h3>
+                <p>La tua agenzia di web design di fiducia</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Codice per prevenire lo scroll automatico e tornare in cima
+        window.addEventListener('load', function() {
+            // Scorre comunque in cima alla pagina al caricamento
+            window.scrollTo(0, 0);
+            
+            // Controlla se c'è un hash nell'URL
+            if (window.location.hash) {
+                // Rimuove il # dall'URL senza ricaricare la pagina
+                setTimeout(function() {
+                    history.pushState("", document.title, window.location.pathname + window.location.search);
+                }, 10);
+            }
+            
+            // Aggiungi una classe al body che controlla le animazioni più lunghe
+            document.body.classList.add('page-loaded');
+        });
+    </script>
+</body>
+</html>
