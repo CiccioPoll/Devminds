@@ -283,26 +283,107 @@
     </div>
 </section>
 
-    <section id="contatti" class="contact">
+    <!-- SEZIONE CONTATTI HTML -->
+<section id="contatti" class="contact">
+    <div class="container">
         <h2>Contattaci</h2>
-        <div class="contact-container">
-            <form class="contact-form">
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Cognome" required>
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Oggetto" required>
-                <textarea placeholder="Il tuo messaggio" required></textarea>
-                <button type="submit" class="submit-btn">Invia Messaggio</button>
-            </form>
+        <p class="contact-subtitle">Siamo qui per trasformare le tue idee in realtà digitale</p>
+        
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Indirizzo</h3>
+                        <p>Via Roma 123, Milano</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p>info@devminds.it</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Telefono</h3>
+                        <p>+39 123 456 7890</p>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <h3>Seguici sui social</h3>
+                    <div class="contact-social-icons">
+                        <a href="https://www.instagram.com/" target="_blank" class="contact-social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/" target="_blank" class="contact-social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="nome" placeholder="Nome" required>
+                            <div class="form-floating-label">Nome</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="cognome" placeholder="Cognome" required>
+                            <div class="form-floating-label">Cognome</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                        <div class="form-floating-label">Email</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="oggetto" placeholder="Oggetto" required>
+                        <div class="form-floating-label">Oggetto</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="messaggio" placeholder="Il tuo messaggio" required></textarea>
+                        <div class="form-floating-label">Il tuo messaggio</div>
+                    </div>
+                    
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="privacy" required>
+                        <label for="privacy">Accetto la <a href="#" class="privacy-link">Privacy Policy</a> e il trattamento dei dati personali</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Invia Messaggio</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <div class="footer-content">
             <div class="footer-info">
                 <a href="#" class="footer-logo">
-                    <img src="Grafiche/Green White Minimalist Brain Bulb Smart Logo (2).svg" alt="Logo DevMinds">
-                    <span class="color1">Dev</span><span class="color2">Minds</span>
+                    <img src="/Grafiche/logo DevMinds bianco.svg" alt="Logo DevMinds">
+                    <span class="color3">Dev</span><span class="color2">Minds</span>
                 </a>
                 <p>Trasformiamo le tue idee in realtà digitale</p>
             </div>
@@ -311,7 +392,8 @@
                 <ul>
                     <li><a href="#about">Chi Siamo</a></li>
                     <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#processo">Come lavoriamo</a></li>
+                    <li><a href="#team">Team</a></li>
                     <li><a href="#contatti">Contatti</a></li>
                 </ul>
             </div>
@@ -407,6 +489,69 @@
                 });
             });
             </script>
+    
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Animazione per input e textarea quando ricevono il focus
+                    const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+                    
+                    formInputs.forEach(input => {
+                        input.addEventListener('focus', function() {
+                            this.style.animation = 'pulse 1s infinite';
+                        });
+                        
+                        input.addEventListener('blur', function() {
+                            this.style.animation = 'none';
+                        });
+                    });
+                    
+                    // Effetto invio messaggio
+                    const contactForm = document.getElementById('contactForm');
+                    
+                    contactForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        const submitBtn = this.querySelector('.submit-btn');
+                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Invio in corso...';
+                        submitBtn.style.animation = 'sendMessage 0.5s ease';
+                        
+                        // Simulazione invio (rimuovere in produzione)
+                        setTimeout(() => {
+                            submitBtn.innerHTML = '<i class="fas fa-check"></i> Messaggio inviato!';
+                            submitBtn.style.backgroundColor = '#4CAF50';
+                            
+                            // Ripristino form dopo 3 secondi (rimuovere in produzione)
+                            setTimeout(() => {
+                                submitBtn.innerHTML = '<span>Invia Messaggio</span><i class="fas fa-paper-plane"></i>';
+                                submitBtn.style.backgroundColor = '#51a0a2';
+                                submitBtn.style.animation = 'none';
+                                contactForm.reset();
+                            }, 3000);
+                        }, 2000);
+                    });
+                    
+                    // Animazioni al scroll per elementi della sezione contatti
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                if (entry.target.classList.contains('contact-info-item')) {
+                                    let delay = 0.2 * Array.from(entry.target.parentNode.children).indexOf(entry.target);
+                                    entry.target.style.animation = `fadeRightIn 0.7s ease-out forwards ${delay}s`;
+                                }
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        threshold: 0.2
+                    });
+                    
+                    const contactItems = document.querySelectorAll('.contact-info-item');
+                    contactItems.forEach(item => {
+                        item.style.opacity = '0';
+                        observer.observe(item);
+                    });
+                });
+                </script>
        
 </body>
 </html>
