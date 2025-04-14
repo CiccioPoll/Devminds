@@ -1765,6 +1765,18 @@ footer {
     color: #ffffff;
 }
 
+.footer-bottom a {
+    color: #51a0a2;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.footer-bottom a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
