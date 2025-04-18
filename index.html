@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="script.js"></script>
+    <!--Script per email JS-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "qCWApbTF8OamBAqnU",
+      });
+   })();
+</script>
+<!--Script per email JS-->
 </head>
 <body>
     <header class="header">
@@ -369,7 +381,7 @@
                         <label for="privacy">Accetto la <a href="#" class="privacy-link">Privacy Policy</a> e il trattamento dei dati personali</label>
                     </div>
                     
-                    <button type="submit" class="submit-btn">
+                    <button type="submit" class="submit-btn" onclick="sendEmail()">
                         <span>Invia Messaggio</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>

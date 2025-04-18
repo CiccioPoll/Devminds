@@ -123,3 +123,17 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(item);
     });
 });
+
+//Email JS
+
+function sendEmail(){
+    const templateParams = {
+        nome : document.querySelector("#nome").value ,
+        cognome : document.querySelector("#cognome").value ,
+        email : document.querySelector("#email").value ,
+        oggetto : document.querySelector("#oggetto").value ,
+        messaggio : document.querySelector("#messaggio").value ,
+};
+
+    emailjs.send("service_4ynaejr","template_jhxfxo9",templateParams)
+}
