@@ -215,6 +215,93 @@ body {
         width: 50%;
     }
 }
+/*Prova per aggiustare la navbar*/
+/* Per risolvere il problema tra 1341px e 1024px */
+/* Menu mobile per schermi fino a 945px */
+@media screen and (max-width: 945px) {
+    /* Stile per l'icona hamburger */
+    .header_quick .icona {
+        display: block;
+        cursor: pointer;
+    }
+    
+    /* Menu nascosto di default */
+    .header_menu {
+        display: none;
+    }
+    
+    /* Quando il menu è aperto tramite la classe menu_open */
+    body.menu_open .header_menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Aggiusta in base all'altezza dell'header */
+        left: 0;
+        width: 100%;
+        background-color: #fff; /* Colore di sfondo del menu */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+        padding: 15px 0;
+    }
+    
+    body.menu_open .header_menu li {
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    body.menu_open .header_menu li:last-child {
+        border-bottom: none;
+    }
+    
+    body.menu_open .header_menu li a {
+        display: block;
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+/* Manteniamo le modifiche per schermi più grandi */
+@media screen and (min-width: 946px) and (max-width: 1024px) {
+    .header_menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .header_menu li {
+        font-size: 14px;
+        margin: 0 8px;
+        white-space: nowrap;
+    }
+    
+    .header_menu li a {
+        padding: 5px 8px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1341px) {
+    .header_menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
+    
+    .header_menu li {
+        font-size: 15px;
+        margin: 0 8px;
+        white-space: nowrap;
+    }
+    
+    .header_menu li a {
+        padding: 5px 10px;
+    }
+}
+/*Prova per aggiustare la navbar*/
 
 /* Hero Section */
 .hero {
