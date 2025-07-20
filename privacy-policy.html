@@ -34,32 +34,36 @@
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 1rem;
+            position: relative;
         }
         
         .privacy-logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             align-items: center;
             text-decoration: none;
         }
         
         .privacy-logo img {
-            height: 80px;
+            height: 100px;
             margin-right: 0px;
         }
-        
         
         .back-button {
             background-color: #51a0a2;
             color: #eee;
             border: none;
-            padding: 0.5rem 1rem;
+            padding: 0.8rem 1.5rem;
             border-radius: 4px;
             font-weight: 600;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             transition: all 0.3s ease;
+            z-index: 1;
         }
         
         .back-button:hover {

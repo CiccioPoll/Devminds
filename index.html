@@ -1,422 +1,431 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevMinds - Web Design & Development</title>
+    <meta name="description" content="DevMinds - Agenzia di web design e sviluppo professionale a Milano. Creiamo siti web responsive, ottimizzati per SEO e con esperienza utente eccezionale. Trasformiamo le tue idee in realtà digitali.">
+    <meta name="keywords" content="web design Milano, sviluppo web, SEO, responsive design, UI/UX, agenzia web, DevMinds, siti web professionali">
+    <meta name="author" content="DevMinds">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:title" content="DevMinds - Web Design & Development | Agenzia Web Milano">
+    <meta property="og:description" content="Trasformiamo le tue idee in esperienze digitali straordinarie. Creiamo siti web che non solo si vedono, ma si vivono. Agenzia web professionale a Milano.">
+    <meta property="og:image" content="https://www.devminds.it/Grafiche/logo DevMinds bianco.svg">
+    <meta property="og:url" content="https://www.devminds.it">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DevMinds - Web Design & Development">
+    <meta name="twitter:description" content="Agenzia web professionale a Milano. Creiamo siti web responsive e ottimizzati per SEO.">
+    <meta name="twitter:image" content="https://www.devminds.it/Grafiche/logo DevMinds bianco.svg">
+    <link rel="canonical" href="https://www.devminds.it">
+    <link rel="alternate" hreflang="it-IT" href="https://www.devminds.it">
+    <title>DevMinds - Web Design & Development | Agenzia Web Professionale Milano</title>
+    
+    <!-- Preload delle risorse critiche -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="Grafiche/logo DevMinds bianco.svg" as="image">
+    
+    <!-- Font e stili -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="script.js"></script>
-    <!--Script per email JS-->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "qCWApbTF8OamBAqnU",
-      });
-   })();
-</script>
-<!--Script per email JS-->
+    
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "qCWApbTF8OamBAqnU",
+            });
+        })();
+    </script>
 </head>
 <body>
-    <header class="header">
+    <header class="header" role="banner">
         <div class="header_content">
             <div class="header-left">
-                <a href="#" class="header_logo">
-                    <img src="Grafiche/Green White Minimalist Brain Bulb Smart Logo (2).svg" alt="Logo DevMinds">
+                <a href="#" class="header_logo" aria-label="Torna alla home">
+                    <img src="Grafiche/logo DevMinds bianco.svg" alt="Logo DevMinds - Agenzia Web Design Milano" class="logo-image" width="75" height="75">
                     <span class="color1">Dev</span><span class="color2">Minds</span>
                 </a>
             </div>
-            <div class="header-right">
+            <nav class="header-right" role="navigation" aria-label="Menu principale">
                 <ul class="header_menu">
-                    <li id="About"><a href="#about">Chi Siamo</a></li>
-                    <li id="Servizi"><a href="#servizi">Servizi</a></li>
-                    <li id="Portfolio"><a href="#processo">Come Lavoriamo</a></li>
-                    <li id="Faq"><a href="#team">Team</a></li>
-                    <li id="Contatti"><a href="#contatti">Contatti</a></li>
+                    <li id="About"><a href="#about" aria-label="Scopri chi siamo">Chi Siamo</a></li>
+                    <li id="Servizi"><a href="#servizi" aria-label="I nostri servizi">Servizi</a></li>
+                    <li id="Portfolio"><a href="#processo" aria-label="Scopri come lavoriamo">Come Lavoriamo</a></li>
+                    <li id="Faq"><a href="#team" aria-label="Conosci il nostro team">Team</a></li>
+                    <li id="Contatti"><a href="#contatti" aria-label="Contattaci">Contatti</a></li>
                 </ul>
-                <div class="header_quick">
-                    <div class="icona">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
+                <button class="icona" aria-label="Menu mobile" aria-expanded="false" aria-controls="header_menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
         </div>
-        <script>
-            document.querySelector('.icona')?.addEventListener("click", function(){
-                document.body.classList.toggle('menu_open')
-            });
-            document.querySelector('#About')?.addEventListener("click", function(){
-                document.body.classList.toggle('menu_open')
-            });
-            document.querySelector('#Servizi')?.addEventListener("click", function(){
-                document.body.classList.toggle('menu_open')
-            });
-            document.querySelector('#Portfolio')?.addEventListener("click", function(){
-                document.body.classList.toggle('menu_open')
-            });
-            document.querySelector('#Contatti')?.addEventListener("click", function(){
-                document.body.classList.toggle('menu_open')
-            });
-            document.querySelector('#Faq')?.addEventListener("click", function(){
-                document.body.classList.toggle('menu_open')
-            });
-        </script>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Trasformiamo le tue idee in realtà digitale</h1>
-            <p>Creiamo siti web professionali che fanno crescere il tuo business</p>
-            <a href="#contatti" class="cta-button">Iniziamo il tuo progetto</a>
-            <div class="hero-social-icons">
-                <a href="https://www.instagram.com/devminds.it/" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/" target="_blank" class="social-icon">
-                    <i class="fab fa-tiktok"></i>
-                </a>
+    <main>
+        <section id="home" class="hero" aria-label="Sezione principale">
+            <div class="floating-elements" aria-hidden="true">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
             </div>
-        </div>
-    </section>
-    
-    <!-- SEZIONE ABOUT START-->
-    <section id="about" class="about">
+            <div class="hero-content">
+                <h1>Trasformiamo le tue idee in esperienze digitali straordinarie</h1>
+                <p>Creiamo siti web che non solo si vedono, ma si vivono. Ogni pixel è progettato per raccontare la tua storia e far crescere il tuo business.</p>
+                <a href="#contatti" class="cta-button" aria-label="Inizia il tuo progetto con noi">Iniziamo il tuo progetto</a>
+                <div class="hero-social-icons">
+                    <a href="https://www.instagram.com/devminds.it/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Seguici su Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Seguici su TikTok">
+                        <i class="fab fa-tiktok" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SEZIONE ABOUT START-->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Chi Siamo</h2>
+                        <p class="subtitle">La tua agenzia di web design professionale</p>
+                        <p>DevMinds è un team di sviluppatori e designer appassionati che creano soluzioni web innovative e personalizzate. Combiniamo creatività e tecnologia per trasformare le tue idee in realtà digitali che fanno crescere il tuo business.</p>
+                        <p>Offriamo servizi completi di design e sviluppo, dalla progettazione alla realizzazione di siti web responsive, ottimizzati per i motori di ricerca e con un'esperienza utente eccezionale.</p>
+                        <div class="about-features">
+                            <div class="feature">
+                                <i class="fas fa-code"></i>
+                                <h3>Sviluppo Professionale</h3>
+                                <p>Codice pulito e ottimizzato per prestazioni eccellenti e facilità di manutenzione</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-paint-brush"></i>
+                                <h3>Design Creativo</h3>
+                                <p>Interfacce moderne e accattivanti che catturano l'attenzione degli utenti</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-rocket"></i>
+                                <h3>Soluzioni Veloci</h3>
+                                <p>Tempi di caricamento ottimizzati per un'esperienza utente superiore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="Grafiche/DevMinds.svg" alt="Il team di DevMinds">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--SEZIONE ABOUT END-->
+
+        <section id="servizi" class="services">
+            <h2>I Nostri Servizi</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Copywriting</h3>
+                    <p>Creazione di contenuti persuasivi e coinvolgenti</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile First</h3>
+                    <p>Ottimizzazione per dispositivi mobili</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-search"></i>
+                    <h3>SEO</h3>
+                    <p>Ottimizzazione per i motori di ricerca</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Personalizzazione</h3>
+                    <p>Sviluppo di funzionalità su misura per il tuo business</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Interfacce intuitive e esperienze utente coinvolgenti</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Manutenzione</h3>
+                    <p>Supporto tecnico e aggiornamenti continui</p>
+                </div>
+            </div>
+        </section>
+
+
+    <section id="processo" class="process">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Chi Siamo</h2>
-                    <p class="subtitle">La tua agenzia di web design professionale</p>
-                    <p>DevMinds è un team di sviluppatori e designer appassionati che creano soluzioni web innovative e personalizzate. Combiniamo creatività e tecnologia per trasformare le tue idee in realtà digitali che fanno crescere il tuo business.</p>
-                    <p>Offriamo servizi completi di design e sviluppo, dalla progettazione alla realizzazione di siti web responsive, ottimizzati per i motori di ricerca e con un'esperienza utente eccezionale.</p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-code"></i>
-                            <h3>Sviluppo Professionale</h3>
-                            <p>Codice pulito e ottimizzato per prestazioni eccellenti e facilità di manutenzione</p>
+            <h2>Il Nostro Processo</h2>
+            <p class="process-subtitle">Come trasformiamo la tua idea in realtà digitale</p>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <div class="process-content">
+                        <div class="process-icon">
+                            <i class="fas fa-comments"></i>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-paint-brush"></i>
-                            <h3>Design Creativo</h3>
-                            <p>Interfacce moderne e accattivanti che catturano l'attenzione degli utenti</p>
+                        <h3>Consultazione Iniziale</h3>
+                        <p>Tutto inizia con una conversazione. Ascoltiamo attentamente le tue esigenze, obiettivi e visione per comprendere a fondo il tuo progetto e le sfide che desideri superare.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <div class="process-content">
+                        <div class="process-icon">
+                            <i class="fas fa-search"></i>
                         </div>
-                        <div class="feature">
+                        <h3>Ricerca e Strategia</h3>
+                        <p>Analizziamo il tuo settore, la concorrenza e il pubblico target. Definiamo una strategia personalizzata che allinea gli obiettivi del tuo business con soluzioni digitali efficaci.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <div class="process-content">
+                        <div class="process-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>Design e Prototipazione</h3>
+                        <p>Creiamo wireframe e mockup che visualizzano la struttura e l'aspetto del tuo sito. Collaboriamo con te per perfezionare ogni dettaglio prima di procedere allo sviluppo.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <div class="process-content">
+                        <div class="process-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Sviluppo</h3>
+                        <p>Il nostro team di sviluppatori trasforma i design in codice, costruendo un sito web responsivo, veloce e tecnicamente solido che rispetta gli standard più recenti.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">5</div>
+                    <div class="process-content">
+                        <div class="process-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <h3>Test e Ottimizzazione</h3>
+                        <p>Testiamo rigorosamente ogni funzionalità su diversi dispositivi e browser. Ottimizziamo la velocità, l'usabilità e l'esperienza utente per garantire prestazioni impeccabili.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">6</div>
+                    <div class="process-content">
+                        <div class="process-icon">
                             <i class="fas fa-rocket"></i>
-                            <h3>Soluzioni Veloci</h3>
-                            <p>Tempi di caricamento ottimizzati per un'esperienza utente superiore</p>
+                        </div>
+                        <h3>Lancio e Supporto</h3>
+                        <p>Dopo il lancio, non ti lasciamo solo. Offriamo supporto continuo, monitoraggio e aggiornamenti per assicurare che il tuo sito rimanga sicuro, aggiornato e performante nel tempo.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-cta">
+                <p>Pronto a iniziare il tuo viaggio digitale con noi?</p>
+                <a href="#contatti" class="process-button">Parliamo del tuo progetto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Team -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Il Nostro Team</h2>
+            <p class="team-subtitle">Le menti creative dietro i nostri progetti digitali</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="/api/placeholder/300/300" alt="Domenico Altomonte">
+                        <div class="member-social">
+                            <a href="#" target="_blank" class="member-social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/mikuzz_06/" target="_blank" class="member-social-icon"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
+                    <div class="member-info">
+                        <h3>Domenico Altomonte</h3>
+                        <p class="member-role">Founder & Lead Developer</p>
+                        <p class="member-description">Sviluppatore full-stack con oltre 8 anni di esperienza nella creazione di soluzioni web innovative e scalabili. La sua passione per le nuove tecnologie si traduce in progetti all'avanguardia.</p>
+                    </div>
                 </div>
-                <div class="about-image">
-                    <img src="Grafiche/DevMinds.svg" alt="Il team di DevMinds">
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="/api/placeholder/300/300" alt="Francesco Politi">
+                        <div class="member-social">
+                            <a href="#" target="_blank" class="member-social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/_francesco.politi_/" target="_blank" class="member-social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Francesco Politi</h3>
+                        <p class="member-role">UI/UX Designer</p>
+                        <p class="member-description">Con un occhio attento ai dettagli e una mente creativa, Laura trasforma concetti complessi in interfacce intuitive e accattivanti che offrono esperienze memorabili agli utenti.</p>
+                    </div>
                 </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="/api/placeholder/300/300" alt="Giuseppe Sgrò">
+                        <div class="member-social">
+                            <a href="#" target="_blank" class="member-social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/giuseppe_sgro_/" target="_blank" class="member-social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Giuseppe Sgrò</h3>
+                        <p class="member-role">SEO Specialist</p>
+                        <p class="member-description">Esperto in strategie di ottimizzazione per i motori di ricerca, Alessandro sa come far emergere il tuo sito dalla massa, garantendo visibilità e risultati concreti nel lungo termine.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-cta">
+                <p>Vuoi conoscere meglio il nostro team e discutere del tuo progetto?</p>
+                <a href="#contatti" class="team-button">Prenota una consulenza gratuita</a>
             </div>
         </div>
     </section>
-    <!--SEZIONE ABOUT END-->
-
-    <section id="servizi" class="services">
-        <h2>I Nostri Servizi</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-pen-fancy"></i>
-                <h3>Copywriting</h3>
-                <p>Creazione di contenuti persuasivi e coinvolgenti</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile First</h3>
-                <p>Ottimizzazione per dispositivi mobili</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-search"></i>
-                <h3>SEO</h3>
-                <p>Ottimizzazione per i motori di ricerca</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-code"></i>
-                <h3>Personalizzazione</h3>
-                <p>Sviluppo di funzionalità su misura per il tuo business</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-paint-brush"></i>
-                <h3>UI/UX Design</h3>
-                <p>Interfacce intuitive e esperienze utente coinvolgenti</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-cogs"></i>
-                <h3>Manutenzione</h3>
-                <p>Supporto tecnico e aggiornamenti continui</p>
-            </div>
-        </div>
-    </section>
-
-
-<section id="processo" class="process">
-    <div class="container">
-        <h2>Il Nostro Processo</h2>
-        <p class="process-subtitle">Come trasformiamo la tua idea in realtà digitale</p>
-        
-        <div class="process-timeline">
-            <div class="process-step">
-                <div class="process-number">1</div>
-                <div class="process-content">
-                    <div class="process-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Consultazione Iniziale</h3>
-                    <p>Tutto inizia con una conversazione. Ascoltiamo attentamente le tue esigenze, obiettivi e visione per comprendere a fondo il tuo progetto e le sfide che desideri superare.</p>
-                </div>
-            </div>
-            
-            <div class="process-step">
-                <div class="process-number">2</div>
-                <div class="process-content">
-                    <div class="process-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>Ricerca e Strategia</h3>
-                    <p>Analizziamo il tuo settore, la concorrenza e il pubblico target. Definiamo una strategia personalizzata che allinea gli obiettivi del tuo business con soluzioni digitali efficaci.</p>
-                </div>
-            </div>
-            
-            <div class="process-step">
-                <div class="process-number">3</div>
-                <div class="process-content">
-                    <div class="process-icon">
-                        <i class="fas fa-pencil-ruler"></i>
-                    </div>
-                    <h3>Design e Prototipazione</h3>
-                    <p>Creiamo wireframe e mockup che visualizzano la struttura e l'aspetto del tuo sito. Collaboriamo con te per perfezionare ogni dettaglio prima di procedere allo sviluppo.</p>
-                </div>
-            </div>
-            
-            <div class="process-step">
-                <div class="process-number">4</div>
-                <div class="process-content">
-                    <div class="process-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Sviluppo</h3>
-                    <p>Il nostro team di sviluppatori trasforma i design in codice, costruendo un sito web responsivo, veloce e tecnicamente solido che rispetta gli standard più recenti.</p>
-                </div>
-            </div>
-            
-            <div class="process-step">
-                <div class="process-number">5</div>
-                <div class="process-content">
-                    <div class="process-icon">
-                        <i class="fas fa-vial"></i>
-                    </div>
-                    <h3>Test e Ottimizzazione</h3>
-                    <p>Testiamo rigorosamente ogni funzionalità su diversi dispositivi e browser. Ottimizziamo la velocità, l'usabilità e l'esperienza utente per garantire prestazioni impeccabili.</p>
-                </div>
-            </div>
-            
-            <div class="process-step">
-                <div class="process-number">6</div>
-                <div class="process-content">
-                    <div class="process-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Lancio e Supporto</h3>
-                    <p>Dopo il lancio, non ti lasciamo solo. Offriamo supporto continuo, monitoraggio e aggiornamenti per assicurare che il tuo sito rimanga sicuro, aggiornato e performante nel tempo.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="process-cta">
-            <p>Pronto a iniziare il tuo viaggio digitale con noi?</p>
-            <a href="#contatti" class="process-button">Parliamo del tuo progetto</a>
-        </div>
-    </div>
-</section>
-
-<!-- Sezione Team -->
-<section id="team" class="team">
-    <div class="container">
-        <h2>Il Nostro Team</h2>
-        <p class="team-subtitle">Le menti creative dietro i nostri progetti digitali</p>
-        
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="/api/placeholder/300/300" alt="Domenico Altomonte">
-                    <div class="member-social">
-                        <a href="#" target="_blank" class="member-social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/mikuzz_06/" target="_blank" class="member-social-icon"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="member-info">
-                    <h3>Domenico Altomonte</h3>
-                    <p class="member-role">Founder & Lead Developer</p>
-                    <p class="member-description">Sviluppatore full-stack con oltre 8 anni di esperienza nella creazione di soluzioni web innovative e scalabili. La sua passione per le nuove tecnologie si traduce in progetti all'avanguardia.</p>
-                </div>
-            </div>
-            
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="/api/placeholder/300/300" alt="Francesco Politi">
-                    <div class="member-social">
-                        <a href="#" target="_blank" class="member-social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/_francesco.politi_/" target="_blank" class="member-social-icon"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="member-info">
-                    <h3>Francesco Politi</h3>
-                    <p class="member-role">UI/UX Designer</p>
-                    <p class="member-description">Con un occhio attento ai dettagli e una mente creativa, Laura trasforma concetti complessi in interfacce intuitive e accattivanti che offrono esperienze memorabili agli utenti.</p>
-                </div>
-            </div>
-            
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="/api/placeholder/300/300" alt="Giuseppe Sgrò">
-                    <div class="member-social">
-                        <a href="#" target="_blank" class="member-social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/giuseppe_sgro_/" target="_blank" class="member-social-icon"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="member-info">
-                    <h3>Giuseppe Sgrò</h3>
-                    <p class="member-role">SEO Specialist</p>
-                    <p class="member-description">Esperto in strategie di ottimizzazione per i motori di ricerca, Alessandro sa come far emergere il tuo sito dalla massa, garantendo visibilità e risultati concreti nel lungo termine.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="team-cta">
-            <p>Vuoi conoscere meglio il nostro team e discutere del tuo progetto?</p>
-            <a href="#contatti" class="team-button">Prenota una consulenza gratuita</a>
-        </div>
-    </div>
-</section>
 
     <!-- SEZIONE CONTATTI HTML -->
-<section id="contatti" class="contact">
-    <div class="container">
-        <h2>Contattaci</h2>
-        <p class="contact-subtitle">Siamo qui per trasformare le tue idee in realtà digitale</p>
-        
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <div class="contact-info-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Indirizzo</h3>
-                        <p>Via Roma 123, Milano</p>
-                    </div>
-                </div>
-                
-                <div class="contact-info-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Email</h3>
-                        <p>info@devminds.it</p>
-                    </div>
-                </div>
-                
-                <div class="contact-info-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Telefono</h3>
-                        <p>+39 123 456 7890</p>
-                    </div>
-                </div>
-                
-                <div class="contact-social">
-                    <h3>Seguici sui social</h3>
-                    <div class="contact-social-icons">
-                        <a href="https://www.instagram.com/devminds.it/" target="_blank" class="contact-social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/" target="_blank" class="contact-social-icon">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <section id="contatti" class="contact">
+        <div class="container">
+            <h2>Contattaci</h2>
+            <p class="contact-subtitle">Siamo qui per trasformare le tue idee in realtà digitale</p>
             
-            <div class="contact-form-container">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" id="nome" placeholder="Nome" required>
-                            <div class="form-floating-label">Nome</div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Indirizzo</h3>
+                            <p>Via Roma 123, Milano</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>info@devminds.it</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Telefono</h3>
+                            <p>+39 123 456 7890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h3>Seguici sui social</h3>
+                        <div class="contact-social-icons">
+                            <a href="https://www.instagram.com/devminds.it/" target="_blank" class="contact-social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/" target="_blank" class="contact-social-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="nome" placeholder="Nome" required>
+                                <div class="form-floating-label">Nome</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="cognome" placeholder="Cognome" required>
+                                <div class="form-floating-label">Cognome</div>
+                            </div>
                         </div>
                         
                         <div class="form-group">
-                            <input type="text" id="cognome" placeholder="Cognome" required>
-                            <div class="form-floating-label">Cognome</div>
+                            <input type="email" id="email" placeholder="Email" required>
+                            <div class="form-floating-label">Email</div>
                         </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Email" required>
-                        <div class="form-floating-label">Email</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="text" id="oggetto" placeholder="Oggetto" required>
-                        <div class="form-floating-label">Oggetto</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <textarea id="messaggio" placeholder="Il tuo messaggio" required></textarea>
-                        <div class="form-floating-label">Il tuo messaggio</div>
-                    </div>
-                    
-                    <div class="form-checkbox">
-                        <input type="checkbox" id="privacy" required>
-                        <label for="privacy">Accetto la <a href="#" class="privacy-link">Privacy Policy</a> e il trattamento dei dati personali</label>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn" onclick="sendEmail()">
-                        <span>Invia Messaggio</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
+                        
+                        <div class="form-group">
+                            <input type="text" id="oggetto" placeholder="Oggetto" required>
+                            <div class="form-floating-label">Oggetto</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="messaggio" placeholder="Il tuo messaggio" required></textarea>
+                            <div class="form-floating-label">Il tuo messaggio</div>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="privacy" required>
+                            <label for="privacy">Accetto la <a href="#" class="privacy-link">Privacy Policy</a> e il trattamento dei dati personali</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" onclick="sendEmail()">
+                            <span>Invia Messaggio</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <footer>
         <div class="footer-content">
             <div class="footer-info">
                 <a href="#" class="footer-logo">
-                    <img src="/Grafiche/logo DevMinds bianco.svg" alt="Logo DevMinds">
-                    <span class="color3">Dev</span><span class="color2">Minds</span>
+                    <img src="Grafiche/logo DevMinds bianco.svg" alt="Logo DevMinds">
+                    <span class="color1">Dev</span><span class="color2">Minds</span>
                 </a>
-                <p>Trasformiamo le tue idee in realtà digitale</p>
+                <p>Trasformiamo le tue idee in esperienze digitali straordinarie. La tua agenzia di web design professionale a Milano.</p>
             </div>
+            
             <div class="footer-links">
                 <h4>Link Rapidi</h4>
                 <ul>
                     <li><a href="#about">Chi Siamo</a></li>
                     <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#processo">Come lavoriamo</a></li>
+                    <li><a href="#processo">Come Lavoriamo</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contatti">Contatti</a></li>
                 </ul>
             </div>
+            
             <div class="footer-contact">
-                <h4>Contattaci</h4>
+                <h4>Contatti</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Via Roma 123, Milano</p>
                 <p><i class="fas fa-envelope"></i> info@devminds.it</p>
                 <p><i class="fas fa-phone"></i> +39 123 456 7890</p>
             </div>
+            
             <div class="footer-social">
-                <h4>Social</h4>
+                <h4>Seguici</h4>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/devminds.it/" target="_blank" class="social-icon">
                         <i class="fab fa-instagram"></i>
@@ -427,9 +436,46 @@
                 </div>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2025 DevMinds. Tutti i diritti riservati. | <a href="privacy-policy.html">Privacy Policy</a></p>
+            <p>&copy; 2024 DevMinds. Tutti i diritti riservati.</p>
         </div>
     </footer>
+
+    <script>
+        // Gestione della navbar trasparente e cambio logo
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            const logoImage = document.querySelector('.logo-image');
+            
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+                logoImage.src = "Grafiche/Green White Minimalist Brain Bulb Smart Logo (2).svg";
+            } else {
+                header.classList.remove('scrolled');
+                logoImage.src = "Grafiche/logo DevMinds bianco.svg";
+            }
+        });
+
+        // Gestione del menu mobile
+        document.querySelector('.icona')?.addEventListener("click", function(){
+            document.body.classList.toggle('menu_open')
+        });
+        document.querySelector('#About')?.addEventListener("click", function(){
+            document.body.classList.toggle('menu_open')
+        });
+        document.querySelector('#Servizi')?.addEventListener("click", function(){
+            document.body.classList.toggle('menu_open')
+        });
+        document.querySelector('#Portfolio')?.addEventListener("click", function(){
+            document.body.classList.toggle('menu_open')
+        });
+        document.querySelector('#Contatti')?.addEventListener("click", function(){
+            document.body.classList.toggle('menu_open')
+        });
+        document.querySelector('#Faq')?.addEventListener("click", function(){
+            document.body.classList.toggle('menu_open')
+        });
+    </script>
 </body>
 </html>
